@@ -1,0 +1,135 @@
+<div class="container-xxl bg-white p-0">
+        
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-xxl position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="m-0">Gabes Action</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a routerLink="" class="nav-item nav-link ">Accueil</a>
+                    <a routerLink="/actualite" class="nav-item nav-link">Actualité</a>
+                    <a routerLink="/projet" class="nav-item nav-link ">Projet</a>
+                    <a routerLink="/offre" class="nav-item nav-link">Offre</a>
+                    <a routerLink="/adhesion" class="nav-item nav-link active">Adhésion</a>
+                    <a routerLink="/about" class="nav-item nav-link">A propos</a>
+                    <a routerLink="/contact" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-xxl py-5 bg-primary hero-header">
+            <div class="container my-5 py-5 px-lg-5">
+                <div class="row g-5 py-5">
+                    <div class="col-12 text-center">
+                        <h1 class="text-white animated slideInDown">Adhésion</h1>
+                        <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+
+        <!-- Contact Start -->
+        <!-- Contact Start -->
+<div class="container-xxl py-5">
+    <div class="container py-5 px-lg-5">
+        <div class="wow fadeInUp" data-wow-delay="0.1s">
+            <p class="section-title text-secondary justify-content-center"><span></span>Rejoignez nous<span></span></p>
+            <h1 class="text-center mb-5">Bienvenue à Gabes Action</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="wow fadeInUp" data-wow-delay="0.3s">
+                    <p class="text-center mb-4">Veulliez remplir ce formulaire.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Nom</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Prénom</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Numéro de télephone (+216) </label>
+                                </div>
+                            </div>  
+                            
+                            <mat-form-field>
+                                <mat-label>Date de Naissance</mat-label>
+                                <input matInput [matDatepicker]="picker">
+                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field>
+                              
+                              <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="nationality" name="nationality" [(ngModel)]="formData.nationality" required>
+                                        <option value="">Choisir votre nationalité</option>
+                                        <option *ngFor="let nationalityOption of nationalityOptions" [value]="nationalityOption">
+                                            {{ nationalityOption }}
+                                        </option>
+                                    </select>
+                                    <label for="nationality">Nationalité</label>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <section class="col-12">
+                                    <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+                                  </section>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                           
+                              
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Contact End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<app-footer></app-footer>
+</div>
