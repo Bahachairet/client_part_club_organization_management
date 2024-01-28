@@ -46,51 +46,22 @@
       </div>
     </div>
   </div>
-  <!--nav end-->
-  <!-- In the actualite.component.html file -->
-
-
-
-
-  <section class="light">
-    <div class="container py-2">
-      <div class="h1 text-center text-dark" id="pageHeaderTitle">Latest News</div>
-  
-      <article class="postcard light blue" *ngFor="let pp of actualiteList; let even = even">
-        <a class="postcard__img_link" href="#">
-          <img class="postcard__img" [src]=" pp.img" alt="Image Title" />
-        </a>
-        <div class="postcard__text t-dark">
-          <div class="postcard__title-container">
-            <h1 [ngClass]="even ? 'postcard__title blue' : 'postcard__title red'">
-              <a href="#">{{ pp.title | uppercase }}</a>
-            </h1>
-          </div>
-          <div class="postcard__bar"></div>
-          <div class="postcard__desc">
-            {{ pp.description.slice(0, 100) }}{{ pp.description> 100 ? '...' : '' }}
-          </div>
-          
-          <div class="postcard__data" style="margin-top: 10px; margin-bottom: 10px;">
-            
-          </div>
-  
-       <!-- Inside your ngFor loop -->
-<div class="tag__item play" [ngClass]="even ? 'blue' : 'red'" style="margin-top: auto;">
-  <a [routerLink]="['/actualite', pp.id]" class="btn btn-primary">Read More</a>
-</div>
-
-        </div>
-      </article>
+  <div class="container text-center" *ngIf="project">
+    <h2 class="mb-4">{{ project.title | uppercase }}</h2>
+    
+    <!-- Author Information with Avatar -->
+    <div class="author-info mb-3">
+      <img src="assets/img/LOGO.png" alt="Author Avatar" class="author-avatar">
+      <p class="author-text">Author Gabes Action</p>
     </div>
-  </section>
+  
+    <img [src]="project.img" alt="Product Image" class="img-fluid rounded" style="max-width: 300px; height: auto;">
+    
+    <div class="mt-4 text-start">
+      <div [innerHTML]="project.description"></div>
+    </div>
+  </div>
   
   
   
-
   <app-footer></app-footer>
-  <!-- Back to Top -->
-  <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"
-    ><i class="bi bi-arrow-up"></i
-  ></a>
-</div>

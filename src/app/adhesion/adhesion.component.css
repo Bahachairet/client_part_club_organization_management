@@ -1,0 +1,22 @@
+
+
+.light-blue-box {
+   /* Light blue background color */
+  border: 10px solid #b3d4f7; /* Thin blue border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  border-image-source: url('/assets/img/bordure.png'); /* Replace 'path/to/your/wavy-pattern.png' with the actual path to your wavy pattern image */
+  border-image-slice: 100; /* Set to 100 to make the entire border image wavy */
+}
+.light-blue-box .form-floating {
+  margin-bottom: 15px; /* You can adjust this value to increase or decrease the spacing */
+}
+
+.light-blue-box .col-md-6 {
+  padding-right: 10px; /* Adjust this value as needed */
+  padding-left: 10px; /* Adjust this value as needed */
+}
+.container {
+  max-width: 900px; /* Adjust this value to your preferred width */
+  margin: 0 auto; /* Center the container horizontally */
+}

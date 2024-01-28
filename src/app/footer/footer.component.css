@@ -1,0 +1,9 @@
+.cla {
+    display: block;
+    margin-bottom: 10px;
+    color: white; /* Change this to your desired color, e.g., #ff0000 for red */
+    text-decoration: none; /* Removes underline from the link */
+}
+.cla:hover {
+    color: #9ACD32; /* Change this to your desired hover color, e.g., #00ff00 for green */
+}

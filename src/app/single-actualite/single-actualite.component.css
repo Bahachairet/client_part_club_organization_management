@@ -1,0 +1,125 @@
+/* Center the container horizontally and add some padding */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style for the title */
+  h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the image */
+  img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Add a rounded border to the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Style for the description */
+  div.text-start {
+    text-align: left;
+    line-height: 1.6;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  /* Style for paragraphs within the description */
+  div.text-start p {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for links within the description */
+  div.text-start a {
+    color: #007bff; /* Blue link color */
+    text-decoration: underline;
+  }
+  
+  /* Style for code blocks within the description */
+  div.text-start code {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  
+  /* Style for blockquotes within the description */
+  div.text-start blockquote {
+    border-left: 4px solid #007bff; /* Blue left border for blockquotes */
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  /* Style for headings within the description */
+  div.text-start h3 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  
+  /* Style for lists within the description */
+  div.text-start ul,
+  div.text-start ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for list items within the description */
+  div.text-start li {
+    margin-bottom: 5px;
+  }
+  
+  /* Style for images within the description */
+  div.text-start img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for horizontal rules within the description */
+  div.text-start hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  /* Style for preformatted text within the description */
+  div.text-start pre {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    overflow-x: auto; /* Add horizontal scroll for code blocks */
+  }
+  /* Style for the Author Information */
+/* Style for the Author Information */
+.author-info {
+
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for the Author Avatar */
+  .author-avatar {
+    width: 50px; /* Set the width of the avatar */
+    height: 50px; /* Set the height of the avatar */
+    border-radius: 50%; /* Make the avatar circular */
+   /* Add some spacing between the avatar and text */
+  }
+  
+  /* Style for the Author Text */
+  .author-text {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #777; /* Light gray text color */
+    font-weight: bold;
+    text-align: center; /* Center the text */
+  }
+  

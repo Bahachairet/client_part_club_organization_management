@@ -19,7 +19,8 @@ import { AdhesionComponent } from './adhesion.component';
     MatInputModule,
     MatDatepickerModule,
     MatCheckboxModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgModule
   ],
   exports: [AdhesionComponent]
 })

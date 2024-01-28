@@ -3,7 +3,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -21,6 +21,16 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { FooterModule } from './footer/footer.module'; // Import FooterModule here
 import { MatNativeDateModule } from '@angular/material/core';
+import { SingleActualiteComponent } from './single-actualite/single-actualite.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { SingleProjetComponent } from './single-projet/single-projet.component';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+import { firestore } from '../firebase';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { SingleOfferComponent } from './single-offer/single-offer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +42,11 @@ import { MatNativeDateModule } from '@angular/material/core';
     ProjetComponent,
     ActualiteComponent,
     OffreComponent,
-    AdhesionComponent
+    AdhesionComponent,
+    SingleActualiteComponent,
+    SingleProjetComponent,
+    SingleOfferComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -44,13 +58,16 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     MatCheckboxModule,
     FormsModule,
-    MatNativeDateModule
-    
-    
+    MatNativeDateModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     // Import FooterModule here
     
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: 'FirestoreInstance', useValue: firestore } // Provide Firestore instance
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
